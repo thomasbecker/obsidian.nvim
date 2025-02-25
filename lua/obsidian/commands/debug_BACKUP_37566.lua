@@ -73,16 +73,14 @@ return function(client, data)
   end
 
   log.lazy_info "Dependencies:"
+<<<<<<< HEAD
+  for _, plugin in ipairs { "plenary.nvim", "nvim-cmp", "telescope.nvim", "fzf-lua", "mini.pick", "snacks.pick" } do
+||||||| 14e0427
+  for _, plugin in ipairs { "plenary.nvim", "nvim-cmp", "telescope.nvim", "fzf-lua", "mini.pick" } do
+=======
 
-  for _, plugin in ipairs {
-    "plenary.nvim",
-    "nvim-cmp",
-    "blink.cmp",
-    "telescope.nvim",
-    "fzf-lua",
-    "mini.pick",
-    "blink.cmp",
-  } do
+  for _, plugin in ipairs { "plenary.nvim", "nvim-cmp", "blink.cmp", "telescope.nvim", "fzf-lua", "mini.pick" } do
+>>>>>>> adamtajti/blink-support
     local plugin_info = util.get_plugin_info(plugin)
     if plugin_info ~= nil then
       log.lazy_info("  ✓ %s: %s", plugin, plugin_info.commit or "unknown")
